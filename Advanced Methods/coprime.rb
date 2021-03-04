@@ -3,6 +3,9 @@
 # The method should return false otherwise. For example coprime?(25, 12) is true because
 # 1 is the only number that divides both 25 and 12.
 
+def coprime?(first_num, sec_num)
+   (2..first_num).none?{ |divisor| first_num % divisor == 0 && sec_num % divisor == 0 }
+end
 
 p coprime?(25, 12)    # => true
 p coprime?(7, 11)     # => true
